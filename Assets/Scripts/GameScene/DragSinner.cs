@@ -32,6 +32,7 @@ public class DragSinner : MonoBehaviour
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mZCoord;
 
+
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
@@ -53,5 +54,9 @@ public class DragSinner : MonoBehaviour
         sinnerInfo.text = "Sinner:\n" +
                           $"Name - {sinnerInfoComponent.name}\n" +
                           $"Sin - {sinnerInfoComponent.sin}";
+    }
+}
+        
+        return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 }
