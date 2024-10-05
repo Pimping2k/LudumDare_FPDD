@@ -12,6 +12,7 @@ public class DragSinner : MonoBehaviour
     private void OnMouseDown()
     {
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        
         UpdateSinnerInformation();
         ShowInfo();
         offset = gameObject.transform.position - GetMouseWorldPosition();
@@ -54,9 +55,5 @@ public class DragSinner : MonoBehaviour
         sinnerInfo.text = "Sinner:\n" +
                           $"Name - {sinnerInfoComponent.name}\n" +
                           $"Sin - {sinnerInfoComponent.sin}";
-    }
-}
-        
-        return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 }
