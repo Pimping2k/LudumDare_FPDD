@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/GameScene/SetSinnerInformation.cs.meta
 guid: 403141f9171098546b09bd6b9d0e7f30
+========
+guid: 3fd21070ead14144ab90028d1e3f5d21
+>>>>>>>> 9ffbfd8 (Andrei branch     (#7)):Assets/Scripts/Container.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
