@@ -1,51 +1,18 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class SinnerCharacteristcsComponent : MonoBehaviour
 {
-    public enum SinType
+    // Start is called before the first frame update
+    void Start()
     {
-        Lust,
-        Gluttony,
-        Greed,
-        Wrath,
-        Heresy,
-        Violence,
-        Fraud,
-        Treachery
+        
     }
 
-    private List<string> names = new List<string>()
+    // Update is called once per frame
+    void Update()
     {
-        "Alexander",
-        "Dmitry",
-        "Irene",
-        "Anna",
-        "Sergey",
-        "Catherine",
-        "Nicholas",
-        "Olga",
-        "Maxim",
-        "Tatiana",
-        "Andrew",
-        "Natalia",
-        "Eugene",
-        "Maria",
-        "Victor",
-        "Svetlana",
-        "Artem",
-        "Ksenia",
-        "Vasily",
-        "Julia"
-    };
-
-    public string name;
-    public SinType sin;
-    private void Awake()
-    {
-        name = names[Random.Range(0, names.Count)];
-        sin = (SinType)Random.Range(0, Enum.GetValues(typeof(SinType)).Length);
+        
     }
 }
