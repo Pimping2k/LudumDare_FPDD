@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5123ca07cbf32439bbf82f2befdc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 10
 --- !u!1001 &728860856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,3 +702,4 @@ SceneRoots:
   - {fileID: 960324354}
   - {fileID: 728860856}
   - {fileID: 232932402}
+  - {fileID: 580676079775430558}
