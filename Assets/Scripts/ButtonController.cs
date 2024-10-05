@@ -1,14 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 
 public class ButtonController : MonoBehaviour
 {
-    private const string GAMESCENE = "GameScene";
+
     [SerializeField] private Button playBtn;
     [SerializeField] private Button quitBtn;
     [SerializeField] private Button devilBtn;
@@ -31,7 +29,7 @@ public class ButtonController : MonoBehaviour
 
     void OnPlayButton()
     {
-        SceneManager.LoadScene(GAMESCENE);
+        SceneManager.LoadScene(Container.GAMESCENE);
     }
 
     void OnQuitButton()
