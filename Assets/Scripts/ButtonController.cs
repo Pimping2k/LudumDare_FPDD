@@ -60,6 +60,7 @@ public class ButtonController : MonoBehaviour
             yield return null;
         }
 
+        
         devilText.transform.position = originalPosition;
     }
 }
