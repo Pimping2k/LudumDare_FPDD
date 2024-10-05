@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -122,6 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &8764928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1206,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2506914496389436725, guid: 4f4dd0ea2d2ed8a4e92174eed6d84829, type: 3}
   m_PrefabInstance: {fileID: 728860856}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> a30ca23 (Make a logic for spawn people)
 --- !u!1 &914852320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1221,7 @@ GameObject:
   - component: {fileID: 914852322}
   - component: {fileID: 914852321}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1305,7 +1308,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.2, z: 17.7}
-  m_LocalScale: {x: 94.5, y: 1, z: 170.3}
+  m_LocalScale: {x: 94.5, y: 1, z: 60.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1320,7 +1323,6 @@ GameObject:
   m_Component:
   - component: {fileID: 960324354}
   - component: {fileID: 960324355}
-  - component: {fileID: 960324356}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1355,6 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1510d8ff36d5e4287c19639f9bd97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   peoplePrefab: {fileID: 8085394965654788105, guid: 2f09856014b66ea40a856d12fc541919, type: 3}
 --- !u!114 &960324356
 MonoBehaviour:
@@ -1544,6 +1547,9 @@ RectTransform:
   m_AnchoredPosition: {x: -2.143, y: 2.252}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+  peoplePrefab: {fileID: 2506914496389436725, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+>>>>>>> a30ca23 (Make a logic for spawn people)
 --- !u!1 &1038971140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1561,6 @@ GameObject:
   - component: {fileID: 1038971143}
   - component: {fileID: 1038971142}
   - component: {fileID: 1038971141}
-  - component: {fileID: 1038971144}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1649,6 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701e8e7500933564ca90d0104df50c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &1099866980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,6 +2243,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> a30ca23 (Make a logic for spawn people)
 --- !u!1 &1381403858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,6 +3026,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1635482260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,6 +3201,9 @@ RectTransform:
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1635959566
+=======
+--- !u!1001 &580676079775430558
+>>>>>>> a30ca23 (Make a logic for spawn people)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3199,6 +3211,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: -8679921383154817045, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9
@@ -4226,21 +4239,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+=======
+    - target: {fileID: 2506914496389436725, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+      propertyPath: m_Name
+      value: Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+>>>>>>> a30ca23 (Make a logic for spawn people)
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.7071068
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -65
@@ -4250,14 +4283,17 @@ PrefabInstance:
       value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+=======
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+>>>>>>> a30ca23 (Make a logic for spawn people)
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50149113656450154, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+    - target: {fileID: 4048309898852369595, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
@@ -4281,6 +4317,7 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 23
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8397743173349176883, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_Name
       value: HealthBar
@@ -4510,6 +4547,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011329639, y: 0.0751033, z: 0.0014467379}
   m_Center: {x: 0.00006680102, y: 0.014197068, z: 0.00220211}
+=======
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
+>>>>>>> a30ca23 (Make a logic for spawn people)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4517,7 +4561,9 @@ SceneRoots:
   - {fileID: 1038971143}
   - {fileID: 1609195919}
   - {fileID: 914852324}
+  - {fileID: 580676079775430558}
   - {fileID: 960324354}
+<<<<<<< HEAD
   - {fileID: 728860856}
   - {fileID: 232932402}
   - {fileID: 1980944706}
@@ -4533,3 +4579,5 @@ SceneRoots:
   - {fileID: 172531444}
   - {fileID: 1835114989}
   - {fileID: 204464861}
+=======
+>>>>>>> a30ca23 (Make a logic for spawn people)
