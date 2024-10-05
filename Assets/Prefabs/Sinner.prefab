@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 490553908938198249}
   - component: {fileID: -2493610212111827320}
   - component: {fileID: -3152803990748315122}
-  - component: {fileID: 9012212489769734542}
+  - component: {fileID: 2456452639806644206}
   m_Layer: 0
   m_Name: Sinner
   m_TagString: Sinner
@@ -109,10 +109,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 48
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &-2493610212111827320
 MonoBehaviour:
@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0f677f2462f4e45a79f9dc9bc6e1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sinnerInfoContainer: {fileID: 0}
 --- !u!136 &-3152803990748315122
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -150,7 +149,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9012212489769734542
+--- !u!114 &2456452639806644206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,8 +158,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2506914496389436725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54cd6e94ca9b00b4e9552cb128edad23, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e0f677f2462f4e45a79f9dc9bc6e1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  sin: 
