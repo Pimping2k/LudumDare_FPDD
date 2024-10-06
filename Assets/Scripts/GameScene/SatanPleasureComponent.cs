@@ -1,27 +1,27 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SatanPleasureComponent : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    private int currentHealth;
-    [SerializeField] private int damagePerInterval = 1;  
-    [SerializeField] private float damageInterval = 4f;  
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float damagePerInterval = 0.1f;  
+    [SerializeField] private float damageInterval = 0.1f;
+    [SerializeField] private Image healthBar;
     
-    private Coroutine damageCoroutine;
+    public float currentHealth;
 
-    
     void Awake()
     {
         currentHealth = maxHealth;
+        UpdateHealthBar(); 
     }
     
     void Start()
     {
-        damageCoroutine = StartCoroutine(AutoDamageCoroutine());
+        StartCoroutine(AutoDamageCoroutine());
     }
     
-    // Корутин для периодического уменьшения здоровья
     IEnumerator AutoDamageCoroutine()
     {
         while (currentHealth > 0)
@@ -31,13 +31,23 @@ public class SatanPleasureComponent : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(float damageAmount)
     {
-        currentHealth -= damageAmount;  
+        currentHealth -= damageAmount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); 
+        UpdateHealthBar();
         
-        if (damageCoroutine != null)
+        if (currentHealth <= 0)
         {
-            StopCoroutine(damageCoroutine);
+            StopAllCoroutines();
+        }
+    }
+    
+    private void UpdateHealthBar()
+    {
+        if (healthBar)
+        {
+            healthBar.fillAmount = currentHealth / maxHealth; 
         }
     }
 }
