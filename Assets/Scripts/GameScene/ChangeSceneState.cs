@@ -7,6 +7,7 @@ public class ChangeSceneState : MonoBehaviour
     private Camera _camera;
     [SerializeField] float duration = 0.5f;
     [SerializeField] private Button returnButton;
+    [SerializeField] private GameObject satanScale;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class ChangeSceneState : MonoBehaviour
         {
             StartCoroutine(RotateCamera());
             returnButton.gameObject.SetActive(true);
+            satanScale.gameObject.SetActive(true);
         }
     }
 

@@ -9,7 +9,7 @@ public class GameButtonController : MonoBehaviour
 {
     [SerializeField] private Button returnButton;
     [SerializeField] private CameraControl _cameraControl;
-    
+    [SerializeField] private GameObject satanScale;
     private void Start()
     {
         returnButton.onClick.AddListener(OnReturnButton);
@@ -24,6 +24,7 @@ public class GameButtonController : MonoBehaviour
     IEnumerator RotateAndDisableButton()
     {
         yield return StartCoroutine(_cameraControl.RotateCamera());
+        satanScale.gameObject.SetActive(false);
         returnButton.gameObject.SetActive(false);
     }
 }
