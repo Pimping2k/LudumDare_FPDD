@@ -5,23 +5,17 @@ using Random = UnityEngine.Random;
 
 public class SinnerCharacteristcsComponent : MonoBehaviour
 {
-    private List<string> sins = new List<string>()
+    public enum SinType
     {
-        "Wasteful",
-        "Profligate",
-        "Slothful",
-        "False Teacher",
-        "Blasphemer",
-        "Suicide",
-        "Lustful",
-        "Glutton",
-        "Greedy",
-        "Wrathful",
-        "Heretic",
-        "Tyrant",
-        "Deceiver",
-        "Betrayer"
-    };
+        Lust,
+        Gluttony,
+        Greed,
+        Wrath,
+        Heresy,
+        Violence,
+        Fraud,
+        Treachery
+    }
 
     private List<string> names = new List<string>()
     {
@@ -48,11 +42,10 @@ public class SinnerCharacteristcsComponent : MonoBehaviour
     };
 
     public string name;
-    public string sin;
-
+    public SinType sin;
     private void Awake()
     {
         name = names[Random.Range(0, names.Count)];
-        sin = sins[Random.Range(0, sins.Count)];
+        sin = (SinType)Random.Range(0, Enum.GetValues(typeof(SinType)).Length);
     }
 }

@@ -16,6 +16,6 @@ public class SetSinnerInformation : MonoBehaviour
 
         sinnerText.text = "Sinner:\n" +
                           $"Name - {sinnerCharacteristic.name}\n" +
-                          $"Sin - {sinnerCharacteristic.sin}";
+                          $"Sin - {sinnerCharacteristic.sin.ToString()}";
     }
 }
