@@ -266,9 +266,29 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Name
       value: kotel_1488 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_TagString
+      value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424396828587804706, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821623529969584324, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Layer
@@ -601,6 +621,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Name
       value: kotel_1488 (5)
@@ -753,6 +777,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Name
       value: kotel_1488 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_TagString
+      value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424396828587804706, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821623529969584324, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Layer
@@ -1042,6 +1082,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Layer
@@ -1357,7 +1401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1510d8ff36d5e4287c19639f9bd97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   peoplePrefab: {fileID: 8085394965654788105, guid: 2f09856014b66ea40a856d12fc541919, type: 3}
 --- !u!114 &960324356
 MonoBehaviour:
@@ -1982,6 +2025,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Name
       value: kotel_1488 (1)
@@ -2126,6 +2173,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Layer
@@ -3272,9 +3323,29 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Name
       value: kotel_1488 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_TagString
+      value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424396828587804706, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821623529969584324, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Layer
@@ -3416,6 +3487,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -7029948723529949830, guid: aa9b56d57aea9784296ceb9cd1149495, type: 3}
       propertyPath: m_Layer
@@ -4334,6 +4409,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 8397743173349176883, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508743247624286058, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508743247624286058, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4547,13 +4634,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011329639, y: 0.0751033, z: 0.0014467379}
   m_Center: {x: 0.00006680102, y: 0.014197068, z: 0.00220211}
-=======
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 60a1f4f53f9502643905e96de8019ceb, type: 3}
->>>>>>> a30ca23 (Make a logic for spawn people)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4579,5 +4659,3 @@ SceneRoots:
   - {fileID: 172531444}
   - {fileID: 1835114989}
   - {fileID: 204464861}
-=======
->>>>>>> a30ca23 (Make a logic for spawn people)
