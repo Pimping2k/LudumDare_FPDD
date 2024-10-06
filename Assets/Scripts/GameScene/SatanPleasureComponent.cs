@@ -24,6 +24,7 @@ public class SatanPleasureComponent : MonoBehaviour
         damageCoroutine = StartCoroutine(AutoDamageCoroutine());
     }
 
+
     private void OnDisable()
     {
         if (damageCoroutine != null)
@@ -31,7 +32,7 @@ public class SatanPleasureComponent : MonoBehaviour
             StopCoroutine(damageCoroutine);
         }
     }
-
+    
     IEnumerator AutoDamageCoroutine()
     {
         while (currentHealth > 0)
@@ -64,6 +65,7 @@ public class SatanPleasureComponent : MonoBehaviour
         {
             StopCoroutine(damageCoroutine);
             damageCoroutine = null;
+
         }
     }
 

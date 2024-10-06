@@ -10,6 +10,7 @@ public class SinnerSpawner : MonoBehaviour
     [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
     
     private int maxSinner = 5;
+    private List<GameObject> spawnedSinners = new List<GameObject>(); // Список для хранения созданных объектов
 
     private Vector3 targetPosition;
 
