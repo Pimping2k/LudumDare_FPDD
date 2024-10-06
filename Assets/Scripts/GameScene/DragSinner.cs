@@ -56,7 +56,4 @@ public class DragSinner : MonoBehaviour
                           $"Sin - {sinnerInfoComponent.sin}";
     }
 }
-        
-        return Camera.main.ScreenToWorldPoint(mousePoint);
-    }
-}
+
