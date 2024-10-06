@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/GameScene_new.unity
     guid: be5f1d89609274c41b8ee6ef4e19afb8
   - enabled: 1
     path: Assets/Scenes/ChooseTrickScene.unity
