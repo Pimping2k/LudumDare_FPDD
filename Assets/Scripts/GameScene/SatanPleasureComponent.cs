@@ -24,6 +24,14 @@ public class SatanPleasureComponent : MonoBehaviour
         damageCoroutine = StartCoroutine(AutoDamageCoroutine());
     }
 
+    private void OnDisable()
+    {
+        if (damageCoroutine != null)
+        {
+            StopCoroutine(damageCoroutine);
+        }
+    }
+
     IEnumerator AutoDamageCoroutine()
     {
         while (currentHealth > 0)
@@ -39,23 +47,23 @@ public class SatanPleasureComponent : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBar();
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && damageCoroutine != null)
         {
             StopCoroutine(damageCoroutine);
-            StopAllCoroutines();
+            damageCoroutine = null;
         }
     }
-    
-    public void IncreaseHealth(float damageAmount)
+
+    public void IncreaseHealth(float healthAmount)
     {
-        currentHealth -= damageAmount;
+        currentHealth += healthAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBar();
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && damageCoroutine != null)
         {
             StopCoroutine(damageCoroutine);
-            StopAllCoroutines();
+            damageCoroutine = null;
         }
     }
 
