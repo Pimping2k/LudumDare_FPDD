@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +7,10 @@ public class SinnerSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject sinnerPrefab;
     [SerializeField] private SinnersCounterController _sinnersCounterController;
+    [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
+    
     private int maxSinner = 5;
+    private List<GameObject> spawnedSinners = new List<GameObject>(); // Список для хранения созданных объектов
 
     private Vector3 targetPosition;
 
@@ -19,13 +21,31 @@ public class SinnerSpawner : MonoBehaviour
 
     IEnumerator SpawnSinner()
     {
-        while (Container.sinnerCounter < 5)
+        while (Container.sinnerCounter < maxSinner)
         {
             targetPosition = new Vector3(Random.Range(-15, 0), 17, 5);
-            Instantiate(sinnerPrefab, targetPosition, Quaternion.identity);
-            _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter+1);
+            GameObject sinner = Instantiate(sinnerPrefab, targetPosition, Quaternion.identity);
+            spawnedSinners.Add(sinner);
+            _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
             Container.sinnerCounter++;
+            StartCoroutine(CheckAndDestroy(sinner));
             yield return new WaitForSeconds(5f);
+        }
+    }
+
+    IEnumerator CheckAndDestroy(GameObject sinner)
+    {
+        while (sinner != null)
+        {
+            if (sinner.transform.position.y < -3)
+            {
+                _satanPleasureComponent.TakeDamage(0.2f);
+                Container.sinnerCounter--;
+                _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
+                Destroy(sinner); 
+                spawnedSinners.Remove(sinner);
+            }
+            yield return null;
         }
     }
 }

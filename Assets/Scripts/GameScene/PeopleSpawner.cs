@@ -22,7 +22,7 @@ public class PeopleSpawner : MonoBehaviour
 
             StartCoroutine(CheckAndDestroy(spawnedPeople));
 
-            yield return new WaitForSeconds(Random.Range(6f, 10f));
+            yield return new WaitForSeconds(Random.Range(3f,4f));
         }
     }
 

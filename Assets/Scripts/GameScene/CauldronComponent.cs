@@ -10,6 +10,7 @@ public class CauldronComponent : MonoBehaviour
     [SerializeField] private CauldronNumber _cauldronNumber;
     [SerializeField] private SinnersCounterController sinnersCounterController;
     [SerializeField] private TextMeshPro cauldronName;
+    [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
 
     enum CauldronNumber
     {
@@ -41,18 +42,19 @@ public class CauldronComponent : MonoBehaviour
 
             if (!IsMatchingSinToCauldron(sinnerCharacteristics.sin))
             {
-                //Decreasing satan pleasure component
-                //TO DO, Camera Shake(effect) and some sound
-                Debug.Log("Not Good");
+                _satanPleasureComponent.TakeDamage(0.2f);
+                Debug.Log($"Not Good. Current health: {_satanPleasureComponent.currentHealth}");
             }
             else
             {
-                Debug.Log("Good");
+                _satanPleasureComponent.IncreaseHealth(0.2f);
+                Debug.Log($"Good. Current health: {_satanPleasureComponent.currentHealth}");
             }
 
             Destroy(other.gameObject);
         }
     }
+
 
     public bool IsMatchingSinToCauldron(SinnerCharacteristcsComponent.SinType sinType)
     {
