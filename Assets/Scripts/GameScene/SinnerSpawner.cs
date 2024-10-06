@@ -25,7 +25,6 @@ public class SinnerSpawner : MonoBehaviour
         {
             targetPosition = new Vector3(Random.Range(-15, 0), 17, 5);
             GameObject sinner = Instantiate(sinnerPrefab, targetPosition, Quaternion.identity);
-            spawnedSinners.Add(sinner);
             _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
             Container.sinnerCounter++;
             StartCoroutine(CheckAndDestroy(sinner));
@@ -43,7 +42,6 @@ public class SinnerSpawner : MonoBehaviour
                 Container.sinnerCounter--;
                 _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
                 Destroy(sinner); 
-                spawnedSinners.Remove(sinner);
             }
             yield return null;
         }
