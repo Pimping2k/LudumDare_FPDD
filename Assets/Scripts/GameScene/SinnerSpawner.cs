@@ -9,7 +9,7 @@ public class SinnerSpawner : MonoBehaviour
     [SerializeField] private SinnersCounterController _sinnersCounterController;
     [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
     
-    private int maxSinner = 5;
+    private int maxSinner = 10;
 
     private Vector3 targetPosition;
 
@@ -24,12 +24,15 @@ public class SinnerSpawner : MonoBehaviour
         {
             targetPosition = new Vector3(Random.Range(-15, -8), 17, 5);
             GameObject sinner = Instantiate(sinnerPrefab, targetPosition, new Quaternion(0,180,0,0));
-            _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
+        
             Container.sinnerCounter++;
+            _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
+        
             StartCoroutine(CheckAndDestroy(sinner));
             yield return new WaitForSeconds(5f);
         }
     }
+
 
     IEnumerator CheckAndDestroy(GameObject sinner)
     {
@@ -37,10 +40,15 @@ public class SinnerSpawner : MonoBehaviour
         {
             if (sinner.transform.position.y < -3)
             {
-                _satanPleasureComponent.TakeDamage(0.2f);
-                Container.sinnerCounter--;
-                _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
-                Destroy(sinner); 
+                SatanPleasureComponent.Instance.TakeDamage(3f);
+    
+                if (Container.sinnerCounter > 0)
+                {
+                    Container.sinnerCounter--;
+                    _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
+                }
+
+                Destroy(sinner);
             }
             yield return null;
         }

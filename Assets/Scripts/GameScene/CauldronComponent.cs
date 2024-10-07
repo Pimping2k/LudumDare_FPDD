@@ -35,25 +35,30 @@ public class CauldronComponent : MonoBehaviour
     {
         var sinnerCharacteristics = other.GetComponent<SinnerCharacteristcsComponent>();
 
-        if (other.CompareTag(Container.SINNER))
+        if (other.CompareTag(Container.SINNER) && sinnerCharacteristics != null)
         {
             Container.sinnerCounter--;
             sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
 
             if (!IsMatchingSinToCauldron(sinnerCharacteristics.sin))
             {
-                _satanPleasureComponent.TakeDamage(0.2f);
+                SatanPleasureComponent.Instance.TakeDamage(5f);
                 Debug.Log($"Not Good. Current health: {_satanPleasureComponent.currentHealth}");
             }
             else
             {
-                _satanPleasureComponent.IncreaseHealth(0.2f);
+                SatanPleasureComponent.Instance.IncreaseHealth(5f);
                 Debug.Log($"Good. Current health: {_satanPleasureComponent.currentHealth}");
             }
 
             Destroy(other.gameObject);
         }
+        else
+        {
+            Debug.LogWarning("Object is not a sinner or missing SinnerCharacteristcsComponent.");
+        }
     }
+
 
 
     public bool IsMatchingSinToCauldron(SinnerCharacteristcsComponent.SinType sinType)

@@ -22,23 +22,14 @@ public class SinnerCharacteristcsComponent : MonoBehaviour
         "Alexander",
         "Dmitry",
         "Irene",
-        "Anna",
         "Sergey",
-        "Catherine",
         "Nicholas",
-        "Olga",
         "Maxim",
-        "Tatiana",
         "Andrew",
-        "Natalia",
         "Eugene",
-        "Maria",
         "Victor",
-        "Svetlana",
         "Artem",
-        "Ksenia",
         "Vasily",
-        "Julia"
     };
 
     public string name;
