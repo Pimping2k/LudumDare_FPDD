@@ -10,7 +10,6 @@ public class SinnerSpawner : MonoBehaviour
     [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
     
     private int maxSinner = 5;
-    private List<GameObject> spawnedSinners = new List<GameObject>(); // Список для хранения созданных объектов
 
     private Vector3 targetPosition;
 
@@ -23,8 +22,8 @@ public class SinnerSpawner : MonoBehaviour
     {
         while (Container.sinnerCounter < maxSinner)
         {
-            targetPosition = new Vector3(Random.Range(-15, 0), 17, 5);
-            GameObject sinner = Instantiate(sinnerPrefab, targetPosition, Quaternion.identity);
+            targetPosition = new Vector3(Random.Range(-15, -8), 17, 5);
+            GameObject sinner = Instantiate(sinnerPrefab, targetPosition, new Quaternion(0,180,0,0));
             _sinnersCounterController.UpdateSinnerInformation(Container.sinnerCounter);
             Container.sinnerCounter++;
             StartCoroutine(CheckAndDestroy(sinner));

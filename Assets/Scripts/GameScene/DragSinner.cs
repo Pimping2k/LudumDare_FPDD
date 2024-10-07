@@ -6,6 +6,7 @@ public class DragSinner : MonoBehaviour
 {
     [SerializeField] private Text sinnerInfo;
     [SerializeField] private Image sinnerInfoBg;
+    [SerializeField] private Animator _animator;
     private Vector3 offset;
     private float mZCoord;
     private float liftHeight = 1f;
@@ -13,7 +14,6 @@ public class DragSinner : MonoBehaviour
     private GameObject currentCauldron = null;
     private LayerMask cauldronLayerMask;
     private Coroutine liftCoroutine;
-
     private void Start()
     {
         cauldronLayerMask = LayerMask.GetMask("Cauldron");
@@ -21,6 +21,9 @@ public class DragSinner : MonoBehaviour
 
     private void OnMouseDown()
     {
+        _animator.SetBool("isLanded",false);
+        _animator.SetBool("isStaying",false);
+        _animator.SetBool("isCatched",true);
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         UpdateSinnerInformation();
         ShowInfo();
@@ -30,7 +33,6 @@ public class DragSinner : MonoBehaviour
     private void OnMouseDrag()
     {
         gameObject.transform.position = GetMouseWorldPosition() + offset;
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, cauldronLayerMask))
         {
@@ -64,6 +66,7 @@ public class DragSinner : MonoBehaviour
 
     private void OnMouseUp()
     {
+        _animator.SetBool("isCatched",false);
         HideInfo();
         if (currentCauldron != null)
         {

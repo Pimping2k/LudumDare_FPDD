@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sinner
   - Cauldron
+  - Ground
   layers:
   - Default
   - TransparentFX
