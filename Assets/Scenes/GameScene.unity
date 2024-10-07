@@ -4970,15 +4970,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1dad5c51c48f86441b4283bee3add91f, type: 3}
     - target: {fileID: 459480738921432469, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_Color.b
-      value: 0.003921557
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 459480738921432469, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_Color.g
-      value: 0.023321332
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 459480738921432469, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.62352943
       objectReference: {fileID: 0}
     - target: {fileID: 459480738921432469, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_FillAmount
@@ -5066,7 +5066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8508743247624286058, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 8508743247624286058, guid: c80da34d5f9a3474fab1386d31cdb973, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
