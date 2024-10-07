@@ -6,7 +6,12 @@ public class DragSinner : MonoBehaviour
 {
     [SerializeField] private Text sinnerInfo;
     [SerializeField] private Image sinnerInfoBg;
+    [SerializeField] private Image chain;
+    [SerializeField] private Image chain2;
     [SerializeField] private Animator _animator;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip catchedAudio;
+    [SerializeField] private AudioClip openDescriptionAudio;
     private Vector3 offset;
     private float mZCoord;
     private float liftHeight = 1f;
@@ -14,6 +19,7 @@ public class DragSinner : MonoBehaviour
     private GameObject currentCauldron = null;
     private LayerMask cauldronLayerMask;
     private Coroutine liftCoroutine;
+    
     private void Start()
     {
         cauldronLayerMask = LayerMask.GetMask("Cauldron");
@@ -94,12 +100,18 @@ public class DragSinner : MonoBehaviour
 
     void ShowInfo()
     {
+        _audioSource.PlayOneShot(catchedAudio);
+        _audioSource.PlayOneShot(openDescriptionAudio);
+        chain.gameObject.SetActive(true);
+        chain2.gameObject.SetActive(true);
         sinnerInfo.gameObject.SetActive(true);
         sinnerInfoBg.gameObject.SetActive(true);
     }
 
     void HideInfo()
     {
+        chain.gameObject.SetActive(false);
+        chain2.gameObject.SetActive(false);
         sinnerInfo.gameObject.SetActive(false);
         sinnerInfoBg.gameObject.SetActive(false);
     }

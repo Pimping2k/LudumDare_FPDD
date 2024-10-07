@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,7 +8,7 @@ public class SinnerSpawner : MonoBehaviour
     [SerializeField] private SinnersCounterController _sinnersCounterController;
     [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
     
-    private int maxSinner = 10;
+    private int maxSinner = 52;
 
     private Vector3 targetPosition;
 
@@ -22,7 +21,7 @@ public class SinnerSpawner : MonoBehaviour
     {
         while (Container.sinnerCounter < maxSinner)
         {
-            targetPosition = new Vector3(Random.Range(-15, -8), 17, 5);
+            targetPosition = new Vector3(Random.Range(-15, -8), 17, 9);
             GameObject sinner = Instantiate(sinnerPrefab, targetPosition, new Quaternion(0,180,0,0));
         
             Container.sinnerCounter++;

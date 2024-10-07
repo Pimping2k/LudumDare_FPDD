@@ -16,9 +16,9 @@ public class PeopleSpawner : MonoBehaviour
     {
         while (true)
         {
-            Vector3 peoplePosition = new Vector3(Random.Range(-20, 20), Random.Range(20, 25), Random.Range(-2, 40));
+            Vector3 peoplePosition = new Vector3(Random.Range(-20, 20), Random.Range(30,35), Random.Range(-2, 40));
             
-            GameObject spawnedPeople = Instantiate(peoplePrefab, peoplePosition, Quaternion.identity);
+            GameObject spawnedPeople = Instantiate(peoplePrefab, peoplePosition, new Quaternion(90,0,0,0));
 
             StartCoroutine(CheckAndDestroy(spawnedPeople));
 

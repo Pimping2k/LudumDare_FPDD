@@ -18,6 +18,8 @@ public class ButtonController : MonoBehaviour
     [SerializeField][Range(0,10)] private float shakeMagnitude = 50f;
     
     [SerializeField] private Animator animator;
+    [SerializeField] private Animation animationComponent;
+    [SerializeField] private AnimationClip playAnimationClip;
 
     private string[] animationNames = new[] { "Sitting", "Cheering While Sitting", "Sitting Laughing" };
     private string[] replics = new[] { "AHAHAHHAHAHAHAHAHAHA", "Tickle me", "I will choose you" };
@@ -31,7 +33,7 @@ public class ButtonController : MonoBehaviour
 
     void OnPlayButton()
     {
-        SceneManager.LoadScene(Container.GAMESCENE);
+        StartCoroutine(PlayAnimationAndLoadScene());
     }
 
     void OnQuitButton()
@@ -72,5 +74,15 @@ public class ButtonController : MonoBehaviour
         }
 
         devilText.transform.position = originalPosition;
+    }
+    
+    IEnumerator PlayAnimationAndLoadScene()
+    {
+        animationComponent.clip = playAnimationClip;
+        animationComponent.Play();
+
+        yield return new WaitForSeconds(playAnimationClip.length);
+        Container.sinnerCounter = 0;
+        SceneManager.LoadScene(Container.GAMESCENE);
     }
 }

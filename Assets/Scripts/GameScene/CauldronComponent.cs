@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CauldronComponent : MonoBehaviour
@@ -11,6 +8,15 @@ public class CauldronComponent : MonoBehaviour
     [SerializeField] private SinnersCounterController sinnersCounterController;
     [SerializeField] private TextMeshPro cauldronName;
     [SerializeField] private SatanPleasureComponent _satanPleasureComponent;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip correctChoice;
+    [SerializeField] private AudioClip inCorrectChoice;
+    [SerializeField] private AudioClip cauldronSoundEffect;
+    [SerializeField] private GameObject redEffect;
+    [SerializeField] private GameObject greenEffect;
+
+    private ParticleSystem greenParticle;
+    private ParticleSystem redParticle;
 
     enum CauldronNumber
     {
@@ -26,6 +32,8 @@ public class CauldronComponent : MonoBehaviour
 
     private void Start()
     {
+        greenParticle = greenEffect.GetComponent<ParticleSystem>();
+        redParticle = redEffect.GetComponent<ParticleSystem>();
         var cauldronTextColor = this.GetComponentInChildren<TextMeshPro>();
         cauldronName.text = ((int)_cauldronNumber).ToString();
         cauldronTextColor.color = GetColorForCauldron(_cauldronNumber);
@@ -34,7 +42,7 @@ public class CauldronComponent : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var sinnerCharacteristics = other.GetComponent<SinnerCharacteristcsComponent>();
-
+        _audioSource.PlayOneShot(cauldronSoundEffect);
         if (other.CompareTag(Container.SINNER) && sinnerCharacteristics != null)
         {
             Container.sinnerCounter--;
@@ -42,13 +50,19 @@ public class CauldronComponent : MonoBehaviour
 
             if (!IsMatchingSinToCauldron(sinnerCharacteristics.sin))
             {
+                redParticle.Play();
+                _audioSource.PlayOneShot(inCorrectChoice);
                 SatanPleasureComponent.Instance.TakeDamage(5f);
                 Debug.Log($"Not Good. Current health: {_satanPleasureComponent.currentHealth}");
+                StartCoroutine(StopParticleAfterDelay(redParticle, 2f));
             }
             else
             {
+                greenParticle.Play();
+                _audioSource.PlayOneShot(correctChoice);
                 SatanPleasureComponent.Instance.IncreaseHealth(5f);
                 Debug.Log($"Good. Current health: {_satanPleasureComponent.currentHealth}");
+                StartCoroutine(StopParticleAfterDelay(greenParticle, 2f));
             }
 
             Destroy(other.gameObject);
@@ -59,7 +73,11 @@ public class CauldronComponent : MonoBehaviour
         }
     }
 
-
+    private IEnumerator StopParticleAfterDelay(ParticleSystem particleSystem, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        particleSystem.Stop();
+    }
 
     public bool IsMatchingSinToCauldron(SinnerCharacteristcsComponent.SinType sinType)
     {
@@ -85,7 +103,7 @@ public class CauldronComponent : MonoBehaviour
                 return false;
         }
     }
-    
+
     private Color GetColorForCauldron(CauldronNumber cauldron)
     {
         switch (cauldron)
@@ -110,5 +128,4 @@ public class CauldronComponent : MonoBehaviour
                 return Color.white;
         }
     }
-
 }

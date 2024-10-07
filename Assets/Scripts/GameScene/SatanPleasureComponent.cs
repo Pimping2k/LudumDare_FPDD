@@ -11,6 +11,11 @@ public class SatanPleasureComponent : MonoBehaviour
     [SerializeField] private float damageInterval = 0.1f;
     [SerializeField] private Image healthBar;
 
+    [SerializeField] private Animation cameraAnim;
+    [SerializeField] private Animation fadeInAnim;
+
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip losingSound;
     public float currentHealth { get; private set; }
     private Coroutine damageCoroutine;
 
@@ -27,7 +32,7 @@ public class SatanPleasureComponent : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     private void OnEnable()
     {
         damageCoroutine = StartCoroutine(AutoDamageCoroutine());
@@ -58,6 +63,9 @@ public class SatanPleasureComponent : MonoBehaviour
         
         if (currentHealth <= 0 && damageCoroutine != null)
         {
+            _audioSource.PlayOneShot(losingSound);
+            cameraAnim.Play("LostAnim");
+            fadeInAnim.Play("LostIn");
             StopCoroutine(damageCoroutine);
             damageCoroutine = null;
         }
